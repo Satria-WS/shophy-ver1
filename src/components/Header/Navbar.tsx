@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container flex bg-primary/40 justify-between py-2 shadow-md px-5 ">
+      <div className="container relative flex bg-primary/40 justify-between py-2 shadow-md px-5 z-10">
         {/* 1 */}
         <div className="flex justify-center items-center">
           <img className="w-[clamp(48px,_10vw,_90px)]" src={logo} alt="logo" />
@@ -30,7 +30,7 @@ const Navbar = () => {
             </div>
           {/* button cart */}
           <button className="bg-primary py-1 px-4 rounded-full">
-            <FaCartShopping className="text-xl  drop-shadow-sm cursor-pointer" />
+            <FaCartShopping className="text-xl text-white  drop-shadow-sm cursor-pointer" />
           </button>
           {/* toogle */}
           <Toogle />
