@@ -5,6 +5,7 @@ import Navbar from "./components/Header/Navbar";
 import Hero from "./components/Hero/Hero";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ProductListing from "./components/Product/ProductListing";
 
 function App() {
 
@@ -25,7 +26,8 @@ function App() {
       <div className="bg-white dark:bg-gray-900 dark:text-white duration-200 overflow-x-hidden">
         <Navbar />
         <Hero />
-        <Footer/>
+        <ProductListing/>
+        {/* <Footer/> */}
       </div>
     </>
   );
