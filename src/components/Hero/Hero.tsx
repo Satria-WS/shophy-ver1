@@ -21,7 +21,7 @@ const Hero = () => {
     infinite: true,
     speed: 800,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 4000,
     cssEase: "ease-in-out",
     pauseOnHover: false,
@@ -54,18 +54,18 @@ const Hero = () => {
 
   return (
     <>
-      <div className="container relative flex border border-rose-300 min-h-[700px]">
+      <div className="container relative flex flex-col border border-rose-300 min-h-[700px]">
         {/* garis background */}
         <div className="absolute w-[700px] h-[2000px] bg-primary/40 -top-1/2 rotate-45 right-0 rounded-2xl z-0 "></div>
         {/* parent */}
-        <div className=" flex flex-col justify-center items-center  space-y-10 z-[1] ">
+        <div className="space-y-10 z-[1] ">
           {/* slider */}
-          
+
           <Slider {...settings}>
             {ImageList.map((item, index) => (
               <div
                 key={index}
-                className=" border border-gray-500 p-1 flex flex-col items-center"
+                className="flex flex-col border border-gray-300  p-1 items-center"
               >
                 {/* Image Section */}
                 <div
@@ -80,24 +80,35 @@ const Hero = () => {
                   />
                 </div>
                 {/* Content Section */}
-                <div className="border border-yellow-500 text-center">
+                <div className="border border-yellow-500 text-center space-y-5 py-10">
                   <h1
                     className="text-5xl font-bold "
                     data-aos="zoom-out"
                     data-aos-duration="500"
                     data-aos-once="true"
                   >
-                    {item.title} off on all Men's Wear
+                    {item.title} 
                   </h1>
-                  <p className="font-semibold">{item.description}</p>
-                  <button className="py-2 px-4 bg-primary rounded-full hover:shadow-md">
+                  <p
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="100"
+                    className="font-semibold"
+                  >
+                    {item.description}
+                  </p>
+                  <button
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay="300"
+                    className="py-2 px-4 bg-primary rounded-full hover:shadow-md"
+                  >
                     <span className="text-white">Order Now</span>
                   </button>
                 </div>
               </div>
             ))}
           </Slider>
-
         </div>
       </div>
     </>
