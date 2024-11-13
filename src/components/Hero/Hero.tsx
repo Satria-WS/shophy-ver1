@@ -15,7 +15,18 @@ const Hero = () => {
     description: string;
   }
 
-  const settings = {};
+  const settings = {
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 800,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: "ease-in-out",
+    pauseOnHover: false,
+    pauseOnFocus: true,
+  };
 
   const ImageList: imageList[] = [
     {
@@ -45,45 +56,48 @@ const Hero = () => {
     <>
       <div className="container relative flex border border-rose-300 min-h-[700px]">
         {/* garis background */}
-        <div className="absolute w-[700px] h-[2000px] bg-primary/40 -top-1/2 rotate-45 right-0  rounded-2xl z-0 "></div>
+        <div className="absolute w-[700px] h-[2000px] bg-primary/40 -top-1/2 rotate-45 right-0 rounded-2xl z-0 "></div>
         {/* parent */}
-        <div className=" flex flex-col justify-center items-center z-10 space-y-10">
+        <div className=" flex flex-col justify-center items-center  space-y-10 z-[1] ">
           {/* slider */}
-
-          {ImageList.map((item, index) => (
-            <div
-              key={index}
-              className=" border border-gray-500 p-1 flex flex-col items-center"
-            >
-              {/* Image Section */}
+          
+          <Slider {...settings}>
+            {ImageList.map((item, index) => (
               <div
-                data-aos="zoom-in"
-                data-aos-once="true"
-                className="relative z-10"
+                key={index}
+                className=" border border-gray-500 p-1 flex flex-col items-center"
               >
-                <img
-                  className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
-                  src={item.img}
-                  alt="discount"
-                />
-              </div>
-              {/* Content Section */}
-              <div className="border border-yellow-500 text-center">
-                <h1
-                  className="text-5xl font-bold "
-                  data-aos="zoom-out"
-                  data-aos-duration="500"
+                {/* Image Section */}
+                <div
+                  data-aos="zoom-in"
                   data-aos-once="true"
+                  className="relative "
                 >
-                  {item.title} off on all Men's Wear
-                </h1>
-                <p className="font-semibold">{item.description}</p>
-                <button className="py-2 px-4 bg-primary rounded-full hover:shadow-md">
-                  <span className="text-white">Order Now</span>
-                </button>
+                  <img
+                    className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] sm:scale-105 lg:scale-120 object-contain mx-auto"
+                    src={item.img}
+                    alt="discount"
+                  />
+                </div>
+                {/* Content Section */}
+                <div className="border border-yellow-500 text-center">
+                  <h1
+                    className="text-5xl font-bold "
+                    data-aos="zoom-out"
+                    data-aos-duration="500"
+                    data-aos-once="true"
+                  >
+                    {item.title} off on all Men's Wear
+                  </h1>
+                  <p className="font-semibold">{item.description}</p>
+                  <button className="py-2 px-4 bg-primary rounded-full hover:shadow-md">
+                    <span className="text-white">Order Now</span>
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </Slider>
+
         </div>
       </div>
     </>
