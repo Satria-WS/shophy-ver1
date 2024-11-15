@@ -53,7 +53,7 @@ const ProductListing = () => {
     <>
       <div className="container   py-14 overflow-y-hidden">
         {/* title */}
-        <div data-aos="fade-up" className="text-center">
+        <div data-aos="fade-up" className="text-center space-y-1 py-5">
           <p className="text-primary">Listing Product for you</p>
           <h1 className="text-3xl font-bold">Products</h1>
           <p className="text-gray-400">
@@ -62,7 +62,7 @@ const ProductListing = () => {
           </p>
         </div>
       {/* parent */}
-        <div className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  gap-5">
+        <div className=" grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 space-y-1 py-5">
           {/* content */}
           {ProductsData.map((item, index) => (
             <>
