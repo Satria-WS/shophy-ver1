@@ -75,7 +75,7 @@ const Testimonials = () => {
     <>
       <div className="container py-10">
         {/* Text */}
-        <div className="flex flex-col items-center text-center space-y-1">
+        <div className="flex flex-col items-center text-center space-y-1 py-5">
           <p className="text-primary">What our customers are saying</p>
           <h1 className="text-3xl font-bold">Testimonials</h1>
           <p className="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, error?</p>
