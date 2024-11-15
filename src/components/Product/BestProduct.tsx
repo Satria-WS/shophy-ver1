@@ -38,7 +38,7 @@ const BestProduct = () => {
     <>
       <div className="container  p-5 overflow-y-hidden">
         {/* text */}
-        <div className="flex flex-col items-center text-center">
+        <div className="flex flex-col items-center text-center space-y-1 py-5">
           <span className="text-primary">Top Best Rated Products for you</span>
           <h1 className="text-3xl font-bold">Best Products</h1>
           <p className="text-gray-500">
