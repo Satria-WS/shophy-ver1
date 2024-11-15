@@ -54,7 +54,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="container relative flex flex-col  border border-rose-300 h-[700px] overflow-hidden">
+      <div className="container relative flex flex-col h-[700px] overflow-hidden">
         {/* garis background */}
         <div className="absolute w-[700px] h-[2000px] bg-primary/40 -top-1/2 rotate-45 right-0 rounded-2xl z-0 "></div>
         {/* parent */}
@@ -64,7 +64,7 @@ const Hero = () => {
           <Slider {...settings}>
             {ImageList.map((item, index) => (
               // this is parent from the banner
-              <div className="border border-yellow-400 p-5">
+              <div className=" p-5">
                 <div
                   key={index}
                   className="flex flex-col sm:flex-row p-1 items-center"
