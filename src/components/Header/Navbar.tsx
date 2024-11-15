@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container relative flex bg-primary/40 justify-between py-2 shadow-md px-5 z-10">
+      <div className=" relative flex bg-primary/40 justify-between py-2 shadow-md px-5 z-10">
         {/* 1 */}
         <div className="flex justify-center items-center">
           <img className="w-[clamp(48px,_10vw,_90px)]" src={logo} alt="logo" />
@@ -24,7 +24,7 @@ const Navbar = () => {
               <input
                 type="text"
                 placeholder="search"
-                className="w-[100px] sm:w-[200px] group-hover:w-[190px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary dark:border-gray-500 dark:bg-gray-800  "
+                className="w-[100px] sm:w-[200px] group-hover:w-[190px] transition-all duration-300 rounded-full  px-2 py-1 focus:outline-none focus:border-1 focus:border-primar  "
               />
               <IoMdSearch className="text-gray-500 group-hover:text-primary absolute top-1/2 -translate-y-1/2 right-3" />
             </div>
