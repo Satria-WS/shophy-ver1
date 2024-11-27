@@ -1,10 +1,13 @@
-# React + TypeScript + Vite
+# Getting Started with Create React App
+- npm run start
+- Open http://localhost:3000 to view it in your browser.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Portfolio View
+![alt text]({07CE86D0-874B-446F-9924-E70BCED55641}.png)
 
-Currently, two official plugins are available:
+Tech: React , Tailwind , Material-UI
 
-# Documentation deploy 
+Demo:  https://satria-ws.github.io/shophy-ver1/
 
+# Documentation deploy
 https://github.com/gitname/react-gh-pages
-
